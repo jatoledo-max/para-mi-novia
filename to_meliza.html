@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Para vos 💖</title>
+    <style>
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #ffc1cc, #ffe3e3);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    }
+
+    h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+    color: #ff3366;
+    animation: fadeIn 1s ease-in-out;
+    }
+
+    p {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 1em 0;
+    }
+
+    button {
+    background-color: #ff66a3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s;
+    }
+
+    button:hover {
+    transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+<h1>Te amo 💖</h1>
+<p id="phrase">Sos mi Patroclita hermosa.</p>
+<button onclick="nextPhrase()">Tocame 💘</button>
+
+<script>
+    const phrases = [
+    "Sos mi persona favorita 🥰",
+    "Con vos todo es más lindo 🌈",
+    "Tu sonrisa es mi sol ☀️",
+    "Gracias por existir 💫",
+    "Estoy orgulloso de tenerte 💍",
+    "Te amo con locura 💘",
+    "Quiero todo con vos 💞",
+    "Mi corazón es tuyo 💓"
+    ];
+
+    let index = 0;
+    function nextPhrase() {
+    index = (index + 1) % phrases.length;
+    document.getElementById("phrase").textContent = phrases[index];
+    }
+</script>
+</body>
+</html>
